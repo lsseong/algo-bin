@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Strategies Details </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ </head>
+<body>
+<script>
+//statuses
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("http://localhost:2222/service/strategy/schemas", function(data, status){
+        	document.getElementById("schemas_table").innerHTML = "";
+            //alert("Data: " + data + "\nStatus: " + status + "\nDataSize" +data.length);
+            //alert("Data  name: " + data[0].name + "\nData Schema length: " + data[0].schema.length + "\nDataSize" +data.length);
+            var content = '<table class="table table-striped table-condensed"><caption>Strategies</caption>';
+            content +='<thead class="thead-dark"><tr><th scope="col">StrategyName</th><th scope="col">AttributeName</th><th scope="col">Description</th><th scope="col">Required</th>';
+            content +='<th scope="col">Type</th><th scope="col">Min</th><th scope="col">Max</th></tr></thead><tbody>';
+            for (j=0;j<data.length;j++){
+             var schemas = data[j].schema;
+             content +='<tr class="align-middle"><td rowspan='+(schemas.length+1)+'>'+data[j].name+'</td></tr>';
+			for(i=0; i< schemas.length; i++){
+    			content += '<tr><td>' + schemas[i].name + '</td><td>' + schemas[i].description + '</td>';
+    			content += '<td>' + schemas[i].required + '</td><td>' + schemas[i].type + '</td>';
+    			
+    			if( typeof schemas[i].min !=='undefined') {
+    			content += '<td>' + schemas[i].min + '</td>';
+				}else{
+				content += '<td>&nbsp;</td>';
+				}
+				
+				if( typeof schemas[i].max !=='undefined') {
+				content += '<td>' + schemas[i].max+'</td>';
+				}else{
+				content += '<td>&nbsp;</td>';
+				}
+    			content += '</tr>';
+			}
+		}
+			content += "</tbody></table>"
+			$('#schemas_table').append(content);      
+    
+        },"json");
+    });
+});
+// statuses
+$(document).ready(function(){
+    $("button").click(function(){
+        $.get("http://localhost:2222/service/strategy/statuses", function(data, status){
+        	document.getElementById("status_table").innerHTML = "";
+        
+            var status_content = '<table class="table table-striped table-condensed"><caption>Strategy status</caption>';
+            status_content +='<thead><tr><th scope="col">Id</th><th scope="col">Name</th><th scope="col">Time</th><th scope="col">Status</th><th scope="col">Params</th>';
+            status_content +='</tr></thead><tbody>';
+			for(i=0; i< data.length; i++){
+    			status_content += '<tr><td>' + data[i].id + '</td><td>' + data[i].name + '</td>';
+    			status_content += '<td>' + data[i].time + '</td><td>' + data[i].status + '</td>';
+    			if (data[i].parameters === undefined || data[i].parameters.length === undefined ||data[i].parameters.length == 0) {
+    				status_content += '<td>&nbsp;</td></tr>';
+    			}else{
+    				status_content += '<td>' + data[i].parameters.toString() +'</td></tr>';
+       			}
+			}
+			
+			status_content += "</tbody></table>";
+			$('#status_table').append(status_content);      
+    
+        },"json");
+    });
+});
+
+</script>
+
+<div id="schemas_table" class="container table-responsive"></div>
+<div id="status_table" class="container table-responsive"></div>
+<button>Get Strategies</button>
+
+</body>
+</html>

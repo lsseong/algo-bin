@@ -10,3 +10,4 @@
   Streaming URL: http://localhost:2222/service/AlternateBuySell-EURUSD
   Streaming URL: http://localhost:2222/service/AlternateBuySell-IBM
  
+> java -cp algo-container-0.0.1-SNAPSHOT.jar com.algo.demo.fxhedger.RunFxAutohedgerSimulation

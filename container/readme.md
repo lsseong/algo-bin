@@ -1,3 +1,7 @@
+To improve robustness of system, there are two main processes to run independently:
+1. A container that runs a trading strategy (algo-container.jar)
+2. A controller that provides events streaming endpoints to external client (algo-controller.jar)
+
 
 > java -jar algo-container-1.0.0-SNAPSHOT.jar
 
@@ -15,3 +19,4 @@
  * REST points as follows (URL is same as container, just on different port):
  ** http://localhost:2020/service/strategy/statuses
 
+> java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.fxhedger.RunFxAutohedgerSimulation

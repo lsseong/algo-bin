@@ -9,7 +9,7 @@ These fat jars are built in Eclipse using Maven by right click on the project ->
 
  * This will start a default strategy called AlternateBuySellStrategy that do an alternate buy and sell of 1000k EUR/USD (see pom.xml)
  * Aeron streaming port is opened on 7000
- * Log to /temp/simulation/AlternateBuySellStrategy
+ * Log publishing events to /temp/simulation/AlternateBuySellStrategy
  * REST points as follows:
  ** http://localhost:2222/service/strategy/performances
  ** http://localhost:2222/service/strategy/statuses

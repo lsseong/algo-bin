@@ -9,15 +9,9 @@
  ** http://localhost:2222/service/strategy/statuses
 
 > java -jar algo-controller-1.0.0-SNAPSHOT.jar
- * 
+ * This will start a controller process that caches all the events from container and expose an SSE stream
+ * Stream URL is http://localhost:2020/service/<strategy_id>
+ ** http://localhost:2020/service/AlterBuySell-EURUSD
+ * REST points as follows (URL is same as container, just on different port):
+ ** http://localhost:2020/service/strategy/statuses
 
-  http://localhost:2222/service/strategy/statuses
-  Streaming URL: http://localhost:2222/service/AlternateBuySell-EURUSD 
-
-> java -cp algo-container-0.0.1-SNAPSHOT.jar com.algo.demo.cookbook.RunTwoBuySellStrategies
-
-  http://localhost:2222/service/strategy/statuses
-  Streaming URL: http://localhost:2222/service/AlternateBuySell-EURUSD
-  Streaming URL: http://localhost:2222/service/AlternateBuySell-IBM
- 
-> java -cp algo-container-0.0.1-SNAPSHOT.jar com.algo.demo.fxhedger.RunFxAutohedgerSimulation

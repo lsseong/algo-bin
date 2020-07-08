@@ -18,6 +18,7 @@ These fat jars are built in Eclipse using Maven by right click on the project ->
 
 <h2>Bringing up Controller to Serve UI</h2>
 > java -jar algo-controller-1.0.0-SNAPSHOT.jar
+
  * This will start a controller process that caches all the events from container and expose an SSE stream
  * Stream URL is http://localhost:2020/service/<strategy_id>
  ** http://localhost:2020/service/AlterBuySell-EURUSD

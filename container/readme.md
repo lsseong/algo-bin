@@ -4,7 +4,7 @@ To improve robustness of system, there are two main processes to run independent
 1. A container that runs a trading strategy (algo-container.jar)
 2. A controller that provides events streaming endpoints to external client (algo-controller.jar)
 
-These fat jars are built in Eclipse using Maven by right click on the project -> Run As -> Maven Install
+These fat jars are built in Eclipse (found under target directory under project) using Maven by right click on the project -> Run As -> Maven Install
 
 <h2>Running a Default Strategy</h2>
 > java -jar algo-container-1.0.0-SNAPSHOT.jar
@@ -28,3 +28,6 @@ These fat jars are built in Eclipse using Maven by right click on the project ->
 
 <h2>Running an FX Hedging Strategy</h2>
 > java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.fxhedger.RunFxAutohedgerSimulation
+
+<h2>Running a Stock Simulation Strategy</h2>
+> java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.cookbook.RunStockSimulation

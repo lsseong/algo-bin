@@ -32,5 +32,7 @@ These fat jars are built in Eclipse (found under target directory under project)
 <h2>Running an FX Hedging Strategy</h2>
 > java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.fxhedger.RunFxAutohedgerSimulation
 
+  * SSE URL: http://localhost:2020/service/FxAutohedger
+
 <h2>Running a Stock Simulation Strategy</h2>
 > java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.cookbook.RunStockSimulation

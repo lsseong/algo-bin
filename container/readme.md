@@ -25,6 +25,8 @@ These fat jars are built in Eclipse (found under target directory under project)
      * http://localhost:2020/service/AlterBuySell-EURUSD
  * REST points as follows (URL is same as container, just on different port):
      * http://localhost:2020/service/strategy/statuses
+     * http://localhost:2020/service/strategy/performances
+     * http://localhost:2020/service/strategy/schemas
 
 
 <h2>Running an FX Hedging Strategy</h2>

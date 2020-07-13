@@ -1,3 +1,6 @@
+<h2>REST API Testing</h2>
+We can use a browser or a better tool like Postman for API testing.
+
 <h2>Building the Libraries</h2>
 
 To improve robustness of system, there are two main processes to run independently:
@@ -36,8 +39,11 @@ These fat jars are built in Eclipse (found under target directory under project)
 
 
 <h2>Running a Stock Simulation Strategy</h2>
+This strategy only produces prices and analytics.
 > java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.cookbook.RunStockSimulation
 
-  
-<h2>REST API Testing</h2>
-We can use a browser or a better tool like Postman for API testing.
+
+<h2>Running a Strategy Factory</h2>
+This container contains two running strategies that produces prices and analytics (moving average). In addition, it supports creation of new strategy of the same type. 
+
+

@@ -33,9 +33,11 @@ These fat jars are built in Eclipse (found under target directory under project)
 > java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.fxhedger.RunFxAutohedgerSimulation
 
   * SSE URL: http://localhost:2020/service/FxAutohedger
-  
-<h2>REST API Testing</h2>
-We can use a browser or a better tool like Postman for API testing.
+
 
 <h2>Running a Stock Simulation Strategy</h2>
 > java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.cookbook.RunStockSimulation
+
+  
+<h2>REST API Testing</h2>
+We can use a browser or a better tool like Postman for API testing.

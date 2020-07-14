@@ -48,6 +48,8 @@ This strategy only produces prices and analytics.
 <h2>Running a Strategy Factory</h2>
 This container contains two running strategies that produces prices and analytics (moving average). In addition, it supports creation of new strategy of the same type. 
 
+> java -cp algo-container-1.0.0-SNAPSHOT.jar com.algo.demo.cookbook.RunWithStrategyFactory
+
 SSE URL:
   * http://localhost:2020/service/strategy1
   * http://localhost:2020/service/strategy2

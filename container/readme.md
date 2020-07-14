@@ -9,6 +9,8 @@ To improve robustness of system, there are two main processes to run independent
 
 These fat jars are built in Eclipse (found under target directory under project) using Maven by right click on the project -> Run As -> Maven Install
 
+Note: If there's any change to algo-stream project, do a "Maven Install" first to build the latest jar into the maven repository before builing the jars above.
+
 <h2>Running a Default Strategy</h2>
 > java -jar algo-container-1.0.0-SNAPSHOT.jar
 

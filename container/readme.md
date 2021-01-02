@@ -14,7 +14,7 @@ Note: If there's any change to algo-stream project, do a "Maven Install" first t
 <h2>Running a Default Strategy</h2>
 > java -jar algo-container-1.0.0-SNAPSHOT.jar
 
- * This will start a default strategy called AlternateBuySellStrategy that do an alternate buy and sell of 1000k EUR/USD (see pom.xml)
+ * This will start a default strategy called AlternateBuySellStrategy that do an alternate buy and sell of 10 unit of IBM stock (see pom.xml)
  * Aeron streaming port is opened on 7000
  * Log publishing events to /temp/simulation/AlternateBuySellStrategy
  * REST points as follows:
